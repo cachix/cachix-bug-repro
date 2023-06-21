@@ -1,0 +1,11 @@
+task:
+  environment:
+    CACHIX_AUTH_TOKEN: ENCRYPTED[aed46ce712ada4013b2ff4f93b03031d16f7fa0f1e135906e5f138b5c383b2824872e933e366341a3fca210c03fc3cde]
+    CIRRUS_CLONE_DEPTH: 1
+
+  container:
+    image: nixpkgs/nix-flakes:nixos-22.11
+
+  matrix:
+    - name: repro
+      build_script: ./run.sh
